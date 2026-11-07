@@ -1,4 +1,3 @@
-
 // =====================================
 // 1. MOBILE NAVIGATION
 // =====================================
@@ -312,5 +311,199 @@ if (contactForm) {
         );
 
         contactForm.reset();
+    });
+}
+
+
+// =====================================
+// 8. HERO TYPING ANIMATION
+// =====================================
+
+const typingText = document.getElementById("typing-text");
+
+if (typingText) {
+    const roles = [
+        "IT Support & Infrastructure",
+        "Junior Web Developer",
+        "Informatics Student, Semester 5"
+    ];
+
+    const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion) {
+        typingText.textContent = roles[0];
+    } else {
+        let roleIndex = 0;
+        let characterIndex = roles[0].length;
+        let isDeleting = true;
+
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
+
+            if (isDeleting) {
+                characterIndex--;
+            } else {
+                characterIndex++;
+            }
+
+            typingText.textContent = currentRole.substring(
+                0,
+                characterIndex
+            );
+
+            let typingSpeed = isDeleting ? 45 : 85;
+
+            if (!isDeleting && characterIndex === currentRole.length) {
+                typingSpeed = 1800;
+                isDeleting = true;
+            } else if (isDeleting && characterIndex === 0) {
+                isDeleting = false;
+
+                roleIndex = (roleIndex + 1) % roles.length;
+                typingSpeed = 400;
+            }
+
+            setTimeout(typeEffect, typingSpeed);
+        }
+
+        setTimeout(typeEffect, 1500);
+    }
+}
+
+
+// =====================================
+// 9. HERO MOUSE PARALLAX & GLOW
+// =====================================
+
+const hero = document.querySelector(".hero");
+const heroVisual = document.querySelector(".hero-visual");
+const profileGlow = document.querySelector(".profile-glow");
+
+const desktopPointer = window.matchMedia(
+    "(min-width: 1024px) and (pointer: fine)"
+);
+
+const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
+
+if (
+    hero &&
+    heroVisual &&
+    desktopPointer.matches &&
+    !reducedMotion
+) {
+    hero.addEventListener("pointermove", (event) => {
+        const heroRect = hero.getBoundingClientRect();
+        const visualRect = heroVisual.getBoundingClientRect();
+
+        const pointerX = event.clientX - heroRect.left;
+        const pointerY = event.clientY - heroRect.top;
+
+        const normalizedX =
+            (event.clientX - visualRect.left) / visualRect.width - 0.5;
+
+        const normalizedY =
+            (event.clientY - visualRect.top) / visualRect.height - 0.5;
+
+        hero.style.setProperty(
+            "--pointer-x",
+            `${pointerX}px`
+        );
+
+        hero.style.setProperty(
+            "--pointer-y",
+            `${pointerY}px`
+        );
+
+        // Gentle movement, not an aggressive 3D rotation
+        const moveX = normalizedX * 12;
+        const moveY = normalizedY * 12;
+
+        heroVisual.style.transform =
+            `translate3d(${moveX}px, ${moveY}px, 0)`;
+
+        if (profileGlow) {
+            const glowX = pointerX - visualRect.left;
+            const glowY = pointerY - visualRect.top;
+
+            profileGlow.style.left = `${glowX - 160}px`;
+            profileGlow.style.top = `${glowY - 160}px`;
+            profileGlow.style.opacity = "0.32";
+        }
+    });
+
+    hero.addEventListener("pointerleave", () => {
+        hero.style.setProperty("--pointer-x", "50%");
+        hero.style.setProperty("--pointer-y", "50%");
+
+        heroVisual.style.transform = "";
+
+        if (profileGlow) {
+            profileGlow.style.left = "";
+            profileGlow.style.top = "";
+            profileGlow.style.opacity = "";
+        }
+    });
+}
+
+// =====================================
+// 10. 3D PROFILE TILT EFFECT
+// =====================================
+
+const profileFrame = document.querySelector(".profile-frame");
+
+if (
+    profileFrame &&
+    desktopPointer.matches &&
+    !reducedMotion
+) {
+    const heroVisual = profileFrame.closest(".hero-visual");
+
+    heroVisual.addEventListener("pointermove", (event) => {
+        const rect = profileFrame.getBoundingClientRect();
+
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
+
+        const rotateY = (x - 0.5) * 18;
+        const rotateX = (0.5 - y) * 18;
+
+        profileFrame.style.transform = `
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+            scale3d(1.03, 1.03, 1.03)
+        `;
+    });
+
+    heroVisual.addEventListener("pointerleave", () => {
+        profileFrame.style.transform = "";
+    });
+}
+
+// =====================================
+// 11. HOLOGRAPHIC PROFILE LIGHT
+// =====================================
+
+if (
+    profileFrame &&
+    desktopPointer.matches &&
+    !reducedMotion
+) {
+    profileFrame.addEventListener("pointermove", (event) => {
+        const rect = profileFrame.getBoundingClientRect();
+
+        const x = ((event.clientX - rect.left) / rect.width) * 100;
+        const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+        profileFrame.style.setProperty("--shine-x", `${x}%`);
+        profileFrame.style.setProperty("--shine-y", `${y}%`);
+    });
+
+    profileFrame.addEventListener("pointerleave", () => {
+        profileFrame.style.setProperty("--shine-x", "50%");
+        profileFrame.style.setProperty("--shine-y", "50%");
     });
 }
