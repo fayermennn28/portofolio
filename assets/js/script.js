@@ -507,3 +507,89 @@ if (
         profileFrame.style.setProperty("--shine-y", "50%");
     });
 }
+
+
+// =====================================
+// 12. PORTFOLIO TABS
+// =====================================
+
+document.querySelectorAll(".portfolio-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+        document.querySelectorAll(".portfolio-tab").forEach((b) => b.classList.toggle("active", b === tab));
+        document.querySelectorAll(".portfolio-panel").forEach((panel) => {
+            panel.hidden = panel.id !== tab.dataset.tab;
+        });
+    });
+});
+
+
+// =====================================
+// 13. STARFIELD BACKGROUND
+// =====================================
+
+(function () {
+    const canvas = document.getElementById("starfield");
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let w, h, stars = [], shooting = null;
+
+    function resize() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        w = window.innerWidth;
+        h = window.innerHeight;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        const count = Math.round((w * h) / 12000);
+        stars = Array.from({ length: count }, () => ({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: Math.random() * 1.4 + 0.3,
+            a: Math.random() * 0.6 + 0.3,
+            s: Math.random() * 0.02 + 0.004,
+            p: Math.random() * Math.PI * 2
+        }));
+    }
+
+    function draw(time) {
+        ctx.clearRect(0, 0, w, h);
+
+        stars.forEach((st) => {
+            const alpha = still ? st.a : st.a * (0.55 + 0.45 * Math.sin(time * st.s + st.p));
+            ctx.beginPath();
+            ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(190, 220, 255, ${alpha})`;
+            ctx.fill();
+        });
+
+        if (!still) {
+            if (!shooting && Math.random() < 0.003) {
+                shooting = { x: Math.random() * w * 0.8, y: Math.random() * h * 0.4, life: 0 };
+            }
+            if (shooting) {
+                shooting.life += 1;
+                const k = shooting.life;
+                const x = shooting.x + k * 9;
+                const y = shooting.y + k * 4.5;
+                const g = ctx.createLinearGradient(x, y, x - 90, y - 45);
+                g.addColorStop(0, "rgba(150, 200, 255, 0.9)");
+                g.addColorStop(1, "rgba(150, 200, 255, 0)");
+                ctx.strokeStyle = g;
+                ctx.lineWidth = 1.5;
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(x - 90, y - 45);
+                ctx.stroke();
+                if (k > 60) shooting = null;
+            }
+            requestAnimationFrame(draw);
+        }
+    }
+
+    resize();
+    window.addEventListener("resize", resize);
+    requestAnimationFrame(draw);
+})();

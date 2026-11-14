@@ -3,17 +3,17 @@
 ================================ */
 
 :root {
-    --bg-primary: #090610;
-    --bg-secondary: #110B1D;
-    --bg-card: #1B1329;
+    --bg-primary: #060B10;
+    --bg-secondary: #0B141D;
+    --bg-card: #131E29;
 
-    --accent: #A855F7;
-    --accent-hover: #9333EA;
+    --accent: #77B8F9;
+    --accent-hover: #53A0ED;
 
-    --text-primary: #F5F3FF;
-    --text-secondary: #A8A0B8;
+    --text-primary: #F3F9FF;
+    --text-secondary: #A0ACB8;
 
-    --border-color: rgba(192, 132, 252, 0.15);
+    --border-color: rgba(167, 210, 253, 0.15);
 
     --font-heading: 'Plus Jakarta Sans', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -84,7 +84,7 @@ ul {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(11, 17, 32, 0.85);
+    background: rgba(9, 14, 28, 0.85);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color);
 }
@@ -175,10 +175,10 @@ ul {
     align-items: center;
     gap: 10px;
     padding: 8px 15px;
-    border: 1px solid rgba(168, 85, 247, 0.3);
+    border: 1px solid rgba(119, 184, 249, 0.3);
     border-radius: 30px;
-    background: rgba(168, 85, 247, 0.08);
-    color: #C084FC;
+    background: rgba(119, 184, 249, 0.08);
+    color: #A7D2FD;
     font-family: var(--font-code);
     font-size: 11px;
     margin-bottom: 25px;
@@ -390,7 +390,7 @@ ul {
     justify-content: center;
     width: 48px;
     height: 48px;
-    background: rgba(168, 85, 247, 0.12);
+    background: rgba(119, 184, 249, 0.12);
     color: var(--accent);
     border-radius: 12px;
     font-size: 23px;
@@ -412,8 +412,8 @@ ul {
 .skill-tags span,
 .project-tags span {
     padding: 6px 11px;
-    background: rgba(168, 85, 247, 0.1);
-    color: #D8B4FE;
+    background: rgba(119, 184, 249, 0.1);
+    color: #B4D9FE;
     border-radius: 6px;
     font-family: var(--font-code);
     font-size: 10px;
@@ -485,7 +485,7 @@ ul {
 
 .project-image i {
     font-size: 65px;
-    color: #C084FC;
+    color: #A7D2FD;
 }
 
 .project-content {
@@ -817,7 +817,7 @@ ul {
 
 .detail-image i {
     font-size: 100px;
-    color: #C084FC;
+    color: #A7D2FD;
 }
 
 .detail-grid {
@@ -876,7 +876,7 @@ body::before {
     height: 450px;
     background: radial-gradient(
         circle,
-        rgba(168, 85, 247, 0.13),
+        rgba(119, 184, 249, 0.13),
         transparent 70%
     );
     pointer-events: none;
@@ -988,7 +988,7 @@ body::before {
 /* Form interaction */
 .form-group input:focus,
 .form-group textarea:focus {
-    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.12);
+    box-shadow: 0 0 0 3px rgba(119, 184, 249, 0.12);
 }
 
 /* Navigation focus */
@@ -1298,13 +1298,13 @@ body.light-theme .form-group textarea {
 ========================================= */
 
 .header {
-    background: rgba(9, 6, 16, 0.84);
-    border-bottom-color: rgba(168, 85, 247, 0.12);
+    background: rgba(6, 11, 16, 0.84);
+    border-bottom-color: rgba(119, 184, 249, 0.12);
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #C084FC;
+    color: #A7D2FD;
 }
 
 .hero {
@@ -1314,7 +1314,7 @@ body.light-theme .form-group textarea {
     background:
         radial-gradient(
             ellipse at 75% 45%,
-            rgba(126, 34, 206, 0.13),
+            rgba(34, 120, 206, 0.13),
             transparent 45%
         ),
         var(--bg-primary);
@@ -1345,12 +1345,12 @@ body.light-theme .form-group textarea {
 
     background-image:
         linear-gradient(
-            rgba(168, 85, 247, 0.055) 1px,
+            rgba(119, 184, 249, 0.055) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(168, 85, 247, 0.055) 1px,
+            rgba(119, 184, 249, 0.055) 1px,
             transparent 1px
         );
 
@@ -1380,13 +1380,13 @@ body.light-theme .form-group textarea {
 .tech-glow-one {
     top: 10%;
     left: -180px;
-    background: #9333EA;
+    background: #53A0ED;
 }
 
 .tech-glow-two {
     right: -160px;
     bottom: 0;
-    background: #6B21A8;
+    background: #2164A8;
     animation-delay: 2s;
 }
 
@@ -1401,7 +1401,7 @@ body.light-theme .form-group textarea {
 .circuit {
     position: absolute;
     display: block;
-    border: 1px solid rgba(192, 132, 252, 0.3);
+    border: 1px solid rgba(167, 210, 253, 0.3);
 }
 
 .circuit::before,
@@ -1411,8 +1411,8 @@ body.light-theme .form-group textarea {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #C084FC;
-    box-shadow: 0 0 12px #A855F7;
+    background: #A7D2FD;
+    box-shadow: 0 0 12px #77B8F9;
 }
 
 .circuit-one {
@@ -1480,8 +1480,8 @@ body.light-theme .form-group textarea {
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background: #C084FC;
-    box-shadow: 0 0 12px #A855F7;
+    background: #A7D2FD;
+    box-shadow: 0 0 12px #77B8F9;
     animation: particleFloat 6s ease-in-out infinite;
 }
 
@@ -1524,11 +1524,11 @@ body.light-theme .form-group textarea {
 
 .floating-code {
     position: absolute;
-    color: #C084FC;
+    color: #A7D2FD;
     font-family: var(--font-code);
     font-size: 12px;
     opacity: 0.16;
-    text-shadow: 0 0 12px rgba(168, 85, 247, 0.7);
+    text-shadow: 0 0 12px rgba(119, 184, 249, 0.7);
     animation: codeFloat 8s ease-in-out infinite;
 }
 
@@ -1706,7 +1706,7 @@ body.light-theme .form-group textarea {
     pointer-events: none;
     background: radial-gradient(
         450px circle at var(--pointer-x) var(--pointer-y),
-        rgba(168, 85, 247, 0.12),
+        rgba(119, 184, 249, 0.12),
         transparent 70%
     );
 }
@@ -1738,11 +1738,11 @@ body.light-theme .form-group textarea {
 
 #typing-text,
 .typing-cursor {
-    color: #C084FC;
+    color: #A7D2FD;
 }
 
 #typing-text {
-    text-shadow: 0 0 18px rgba(168, 85, 247, .35);
+    text-shadow: 0 0 18px rgba(119, 184, 249, .35);
 }
 
 .typing-cursor {
@@ -1750,7 +1750,7 @@ body.light-theme .form-group textarea {
 }
 
 .status-dot {
-    box-shadow: 0 0 10px #A855F7;
+    box-shadow: 0 0 10px #77B8F9;
     animation: statusPulse 2s ease-in-out infinite;
 }
 
@@ -1774,15 +1774,15 @@ body.light-theme .form-group textarea {
 }
 
 @keyframes statusPulse {
-    0%, 100% { box-shadow: 0 0 5px #A855F7; }
-    50% { box-shadow: 0 0 16px #C084FC; }
+    0%, 100% { box-shadow: 0 0 5px #77B8F9; }
+    50% { box-shadow: 0 0 16px #A7D2FD; }
 }
 
 @media (max-width: 767px) {
     .hero::after {
         background: radial-gradient(
             circle at 50% 35%,
-            rgba(168, 85, 247, .1),
+            rgba(119, 184, 249, .1),
             transparent 65%
         );
     }
@@ -1822,10 +1822,10 @@ body.light-theme .form-group textarea {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: #C084FC;
+    background: #A7D2FD;
     box-shadow:
-        0 0 8px #A855F7,
-        0 0 18px rgba(168, 85, 247, 0.7);
+        0 0 8px #77B8F9,
+        0 0 18px rgba(119, 184, 249, 0.7);
     animation: networkPulse 3s ease-in-out infinite;
 }
 
@@ -1848,7 +1848,7 @@ body.light-theme .form-group textarea {
 }
 
 .network-lines line {
-    stroke: #A855F7;
+    stroke: #77B8F9;
     stroke-width: 1;
     stroke-dasharray: 5 8;
     animation: networkLineFlow 8s linear infinite;
@@ -1902,12 +1902,12 @@ body.light-theme .form-group textarea {
     height: 75%;
     background-image:
         linear-gradient(
-            rgba(168, 85, 247, 0.18) 1px,
+            rgba(119, 184, 249, 0.18) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(168, 85, 247, 0.18) 1px,
+            rgba(119, 184, 249, 0.18) 1px,
             transparent 1px
         );
     background-size: 55px 55px;
@@ -2006,8 +2006,8 @@ body.light-theme .form-group textarea {
     box-shadow: none;
     transform: none;
     filter:
-        drop-shadow(0 0 18px rgba(168, 85, 247, 0.10))
-        drop-shadow(0 0 38px rgba(126, 34, 206, 0.08));
+        drop-shadow(0 0 18px rgba(119, 184, 249, 0.10))
+        drop-shadow(0 0 38px rgba(34, 120, 206, 0.08));
     -webkit-mask-image: linear-gradient(
         to bottom,
         #000 0%,
@@ -2083,7 +2083,7 @@ body.light-theme .form-group textarea {
 
 /* Navbar mengikuti warna tema (sebelumnya biru navy) */
 .header {
-    background: rgba(9, 6, 16, 0.85);
+    background: rgba(6, 11, 16, 0.85);
 }
 
 /* Konten selalu di atas dekorasi background */
@@ -2120,12 +2120,12 @@ body.light-theme .form-group textarea {
     height: 44px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
-    background: rgba(168, 85, 247, 0.06);
+    background: rgba(119, 184, 249, 0.06);
 }
 
 .hero-socials a:hover {
     border-color: var(--accent);
-    background: rgba(168, 85, 247, 0.15);
+    background: rgba(119, 184, 249, 0.15);
 }
 
 /* Logo */
@@ -2166,7 +2166,7 @@ button:focus-visible {
     padding: 5px 12px;
     border: 1px solid var(--border-color);
     border-radius: 6px;
-    background: rgba(168, 85, 247, 0.06);
+    background: rgba(119, 184, 249, 0.06);
     color: var(--text-secondary);
     font-family: var(--font-code);
     font-size: 12px;
@@ -2196,7 +2196,7 @@ button:focus-visible {
     padding: 2px 10px;
     border: 1px solid var(--border-color);
     border-radius: 20px;
-    color: #C084FC;
+    color: #A7D2FD;
     font-family: var(--font-code);
     font-size: 10px;
 }
@@ -2228,25 +2228,25 @@ button:focus-visible {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    width: min(100%, 300px);
+    width: min(100%, 340px);
     aspect-ratio: 4 / 5;
     overflow: hidden;
-    border: 1px solid rgba(168, 85, 247, 0.45);
+    border: 1px solid rgba(119, 184, 249, 0.45);
     border-radius: 24px;
     background:
-        radial-gradient(120% 70% at 50% 0%, rgba(168, 85, 247, 0.30), transparent 62%),
-        linear-gradient(180deg, #1a0f2e 0%, #0d0818 100%);
+        radial-gradient(120% 70% at 50% 0%, rgba(119, 184, 249, 0.30), transparent 62%),
+        linear-gradient(180deg, #0F1E2E 0%, #081018 100%);
     box-shadow:
-        0 24px 60px rgba(88, 28, 135, 0.35),
-        0 0 40px rgba(168, 85, 247, 0.16);
+        0 24px 60px rgba(28, 81, 135, 0.35),
+        0 0 40px rgba(119, 184, 249, 0.16);
     transition: transform 0.15s ease-out, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .profile-frame:hover {
-    border-color: rgba(192, 132, 252, 0.8);
+    border-color: rgba(167, 210, 253, 0.8);
     box-shadow:
-        0 28px 70px rgba(88, 28, 135, 0.45),
-        0 0 56px rgba(168, 85, 247, 0.28);
+        0 28px 70px rgba(28, 81, 135, 0.45),
+        0 0 56px rgba(119, 184, 249, 0.28);
 }
 
 /* Foto utuh di dalam kartu, tanpa fade/mask lagi */
@@ -2261,11 +2261,11 @@ button:focus-visible {
 }
 
 body.light-theme .profile-frame {
-    border-color: rgba(126, 34, 206, 0.35);
+    border-color: rgba(34, 120, 206, 0.35);
     background:
-        radial-gradient(120% 70% at 50% 0%, rgba(168, 85, 247, 0.22), transparent 62%),
-        linear-gradient(180deg, #f1e9ff 0%, #e2d5fa 100%);
-    box-shadow: 0 20px 50px rgba(126, 34, 206, 0.18);
+        radial-gradient(120% 70% at 50% 0%, rgba(119, 184, 249, 0.22), transparent 62%),
+        linear-gradient(180deg, #E9F4FF 0%, #D5E7FA 100%);
+    box-shadow: 0 20px 50px rgba(34, 120, 206, 0.18);
 }
 
 @media (max-width: 767px) {
@@ -2290,4 +2290,290 @@ body.light-theme .profile-frame {
     height: auto;
     object-fit: cover;
     object-position: center bottom;
+}
+
+
+/* =========================================
+   36. LIGHT BLUE DARK THEME + STARFIELD
+========================================= */
+
+:root {
+    --bg-primary: #050b1a;
+    --bg-secondary: #0a1224;
+    --bg-card: #0f1a30;
+    --accent: #6cb4fa;
+    --accent-hover: #4a9df0;
+    --text-secondary: #9fb0c8;
+    --border-color: rgba(108, 180, 250, 0.16);
+}
+
+#starfield {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body {
+    background:
+        radial-gradient(70% 50% at 15% 0%, rgba(40, 100, 220, 0.20), transparent 70%),
+        radial-gradient(60% 45% at 90% 100%, rgba(30, 140, 230, 0.14), transparent 70%),
+        var(--bg-primary);
+    background-attachment: fixed;
+}
+
+/* Section transparan supaya bintang terlihat */
+.about, .skills, .projects, .experience, .contact {
+    background: transparent;
+}
+
+.footer {
+    background: var(--footer-bg);
+}
+
+/* Dekorasi hero lama diganti bintang */
+.network-lines, .network-nodes, .tech-particles, .floating-code {
+    display: none;
+}
+
+/* ---------- Navbar pil melayang (desktop) ---------- */
+@media (min-width: 768px) {
+    .header {
+        background: transparent;
+        backdrop-filter: none;
+        border-bottom: 0;
+        pointer-events: none;
+    }
+    .header .logo,
+    .header .nav-actions,
+    .header .nav-menu { pointer-events: auto; }
+    .header .navbar { position: relative; min-height: 84px; }
+    .nav-menu {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 4px;
+        padding: 6px;
+        border-radius: 999px;
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        backdrop-filter: blur(14px);
+        box-shadow: 0 10px 34px rgba(0, 0, 0, 0.4);
+    }
+    .nav-link {
+        padding: 8px 20px;
+        border-radius: 999px;
+    }
+    .nav-link:hover { color: var(--text-primary); }
+    .nav-link.active {
+        color: var(--text-primary);
+        background: rgba(108, 180, 250, 0.18);
+    }
+}
+
+/* ---------- Education & Experience ---------- */
+.edu-exp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 56px;
+}
+.edu-col h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+.info-card {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-glass);
+    backdrop-filter: blur(8px);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.info-card:hover { border-color: rgba(108, 180, 250, 0.45); transform: translateY(-2px); }
+.info-icon {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(108, 180, 250, 0.14);
+    color: var(--accent);
+    font-size: 20px;
+}
+.info-card strong { display: block; font-size: 15px; line-height: 1.4; }
+.info-card span { display: block; font-size: 13px; color: var(--text-secondary); }
+.info-card em { display: block; margin-top: 4px; font-style: normal; font-size: 12px; color: var(--accent); font-family: var(--font-code); }
+
+/* ---------- Tab Portfolio ---------- */
+.portfolio-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 36px;
+    padding: 6px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+}
+.portfolio-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+.portfolio-tab:hover { color: var(--text-primary); }
+.portfolio-tab.active { background: var(--accent-hover); color: #fff; }
+.portfolio-panel[hidden] { display: none; }
+.portfolio-panel { animation: fadeSlideUp 0.45s ease both; }
+
+/* ---------- Tech Stack ---------- */
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 14px;
+}
+.stack-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 22px 10px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-glass);
+    transition: 0.3s ease;
+}
+.stack-tile:hover { border-color: rgba(108, 180, 250, 0.5); transform: translateY(-3px); }
+.stack-tile i { font-size: 30px; color: var(--accent); }
+.stack-tile b { font-size: 13px; font-weight: 600; }
+.stack-tile small { margin-top: -6px; font-size: 11px; color: var(--text-secondary); font-family: var(--font-code); }
+
+/* ---------- Sertifikat ---------- */
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+
+@media (max-width: 767px) {
+    .edu-exp { grid-template-columns: 1fr; }
+    .portfolio-tab { padding: 9px 16px; font-size: 13px; }
+}
+
+body.light-theme {
+    background: #f4f8ff;
+}
+body.light-theme #starfield { opacity: 0.25; }
+
+
+/* =========================================
+   37. KONTRAS TOMBOL (teks putih di atas biru)
+========================================= */
+
+.btn-primary,
+.portfolio-tab.active,
+.filter-btn.active {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: #fff;
+    border-color: transparent;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+}
+
+
+/* Fade di belakang navbar melayang supaya teks tidak bertabrakan saat scroll */
+@media (min-width: 768px) {
+    .header::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 -28px;
+        background: linear-gradient(to bottom, var(--fade-top) 40%, transparent);
+        pointer-events: none;
+        z-index: -1;
+    }
+}
+
+
+/* =========================================
+   38. SINKRON TEMA GELAP / TERANG
+========================================= */
+
+:root {
+    --glass: rgba(10, 18, 36, 0.62);
+    --glass-border: rgba(108, 180, 250, 0.26);
+    --card-glass: rgba(15, 26, 48, 0.6);
+    --footer-bg: rgba(5, 11, 26, 0.7);
+    --fade-top: rgba(5, 11, 26, 0.92);
+}
+
+body.light-theme {
+    --glass: rgba(255, 255, 255, 0.78);
+    --glass-border: rgba(37, 99, 235, 0.2);
+    --card-glass: rgba(255, 255, 255, 0.85);
+    --footer-bg: rgba(226, 236, 252, 0.9);
+    --fade-top: rgba(244, 248, 255, 0.95);
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --text-secondary: #475569;
+    --border-color: rgba(37, 99, 235, 0.16);
+}
+
+body.light-theme #starfield { display: none; }
+body.light-theme .nav-link.active { background: rgba(37, 99, 235, 0.12); color: #0f172a; }
+body.light-theme .nav-link:hover { color: #0f172a; }
+body.light-theme .info-icon,
+body.light-theme .stack-tile i { color: #2563eb; }
+
+/* Panel foto tetap gelap di kedua tema, supaya baju hitam menyatu */
+body.light-theme .profile-frame {
+    border-color: rgba(108, 180, 250, 0.4);
+    background:
+        radial-gradient(120% 70% at 50% 0%, rgba(59, 130, 246, 0.28), transparent 62%),
+        linear-gradient(180deg, #10203d 0%, #070e1f 100%);
+    box-shadow: 0 18px 44px rgba(30, 64, 140, 0.25);
+}
+
+/* Glow foto lebih tenang */
+.profile-frame {
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   39. LOGO ASLI DI TECH STACK
+========================================= */
+
+.stack-tile img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.stack-tile [hidden] {
+    display: none !important;
+}
+
+/* Logo hitam (GitHub, MikroTik) dibalik jadi terang di tema gelap */
+body:not(.light-theme) .logo-mono {
+    filter: invert(0.9);
 }

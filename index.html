@@ -23,6 +23,7 @@
 </head>
 
 <body>
+    <canvas id="starfield" aria-hidden="true"></canvas>
 
     <!-- ================= NAVBAR ================= -->
     <header class="header">
@@ -32,9 +33,7 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Portfolio</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
 
@@ -231,38 +230,45 @@
                             <div class="info-item"><span>Availability</span><strong>Internship, contract, or full-time</strong></div>
                         </div>
                     </div>
+                
+                    <div class="edu-exp">
+                        <div class="edu-col">
+                            <h3>Education</h3>
+                            <div class="info-card"><div class="info-icon"><i class="bi bi-mortarboard"></i></div>
+                                <div><strong>Universitas Panca Sakti Bekasi</strong><span>Bachelor's Degree, Informatics Engineering</span><em>2024 &ndash; Present &nbsp;|&nbsp; GPA 3.95/4.00</em></div></div>
+                        </div>
+                        <div class="edu-col">
+                            <h3>Experience</h3>
+                            <div class="info-card"><div class="info-icon"><i class="bi bi-gear-wide-connected"></i></div>
+                                <div><strong>Production Operator</strong><span>PT Aneka Mitra Gemilang (Wings Group)</span><em>Nov 2021 &ndash; Feb 2025</em></div></div>
+                            <div class="info-card"><div class="info-icon"><i class="bi bi-box-seam"></i></div>
+                                <div><strong>Logistics &amp; Procurement Intern</strong><span>PT Astra Otoparts Tbk.</span><em>Jan &ndash; Apr 2019</em></div></div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
 
 
         <!-- ================= SKILLS ================= -->
-        <section class="skills section" id="skills">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="section-label">MY CAPABILITIES</span>
-                    <h2>Technical <span>Skills</span></h2>
-                    <p>Tools and technologies from coursework and self-directed projects.</p>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-card"><i class="bi bi-server"></i><h3>IT Infrastructure &amp; Networking</h3><div class="skill-tags"><span>Linux</span><span>Docker</span><span>Cloudflare Tunnel</span><span>Nginx Proxy Manager</span><span>Frigate (CCTV)</span><span>Cisco topology</span><span>MikroTik (basic)</span></div></div>
-                    <div class="skill-card"><i class="bi bi-code-slash"></i><h3>Web Development</h3><div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL (XAMPP)</span><span>WordPress (basic)</span></div></div>
-                    <div class="skill-card"><i class="bi bi-cpu"></i><h3>Mobile &amp; IoT</h3><div class="skill-tags"><span>Flutter</span><span>Dart</span><span>Arduino IDE</span></div></div>
-                    <div class="skill-card"><i class="bi bi-controller"></i><h3>Game Development</h3><div class="skill-tags"><span>Construct 2</span></div></div>
-                </div>
-            </div>
-        </section>
+
 
 
         <!-- ================= PROJECTS ================= -->
         <section class="projects section" id="projects">
             <div class="container">
                 <div class="section-heading">
-                    <span class="section-label">MY RECENT WORK</span>
-                    <h2>Featured <span>Projects</span></h2>
-                    <p>Course projects and self-directed builds. Documentation is being added.</p>
+                    <span class="section-label">MY WORK</span>
+                    <h2>My <span>Portfolio</span></h2>
+                    <p>Projects, certificates, and the tools I work with.</p>
                 </div>
-                <div class="project-filters">
+                <div class="portfolio-tabs" role="tablist">
+                    <button class="portfolio-tab active" data-tab="tab-projects" role="tab"><i class="bi bi-code-slash"></i> Projects</button>
+                    <button class="portfolio-tab" data-tab="tab-certs" role="tab"><i class="bi bi-award"></i> Certificates</button>
+                    <button class="portfolio-tab" data-tab="tab-stack" role="tab"><i class="bi bi-grid"></i> Tech Stack</button>
+                </div>
+                <div class="portfolio-panel" id="tab-projects">
+                    <div class="project-filters">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
                     <button class="filter-btn" data-filter="web">Web</button>
@@ -270,7 +276,7 @@
                     <button class="filter-btn" data-filter="iot">IoT</button>
                     <button class="filter-btn" data-filter="game">Game</button>
                 </div>
-                <div class="projects-grid">
+                    <div class="projects-grid">
                     <article class="project-card" data-category="infrastructure">
                         <div class="project-image"><i class="bi bi-hdd-network"></i></div>
                         <div class="project-content">
@@ -342,38 +348,23 @@
                         </div>
                     </article>
                 </div>
+                </div>
+                <div class="portfolio-panel" id="tab-certs" hidden>
+                    <div class="cert-grid">
+                        <div class="info-card"><div class="info-icon"><i class="bi bi-patch-check"></i></div>
+                            <div><strong>BNSP Competency Certification</strong><span>KKNI Level II in Computer and Network Engineering</span><em>Issued 2020 &nbsp;|&nbsp; Valid through 2023</em></div></div>
+                        <!-- Tambah sertifikat lain dengan menyalin blok info-card di atas -->
+                    </div>
+                </div>
+                <div class="portfolio-panel" id="tab-stack" hidden>
+                    <div class="stack-grid"><div class="stack-tile"><img src="https://cdn.simpleicons.org/linux" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-terminal" hidden></i><b>Linux</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/docker" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-box-seam" hidden></i><b>Docker</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/nginxproxymanager" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-shield-lock" hidden></i><b>Nginx Proxy Manager</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/cloudflare" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-cloud-arrow-up" hidden></i><b>Cloudflare Tunnel</b></div><div class="stack-tile"><i class="bi bi-camera-video"></i><b>Frigate</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/cisco" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-diagram-3" hidden></i><b>Cisco</b><small>topology</small></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/mikrotik" class="logo-mono" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-router" hidden></i><b>MikroTik</b><small>basic</small></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/html5" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-code-slash" hidden></i><b>HTML</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/css3" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-braces" hidden></i><b>CSS</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/javascript" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-braces" hidden></i><b>JavaScript</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/php" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-file-earmark-code" hidden></i><b>PHP</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/mysql" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-database" hidden></i><b>MySQL</b><small>XAMPP</small></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/wordpress" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-wordpress" hidden></i><b>WordPress</b><small>basic</small></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/flutter" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-phone" hidden></i><b>Flutter</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/dart" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-lightning-charge" hidden></i><b>Dart</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/arduino" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-cpu" hidden></i><b>Arduino</b><small>IDE</small></div><div class="stack-tile"><i class="bi bi-controller"></i><b>Construct 2</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/visualstudiocode" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-code-square" hidden></i><b>VS Code</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/androidstudio" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-android2" hidden></i><b>Android Studio</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/git" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-git" hidden></i><b>Git</b></div><div class="stack-tile"><img src="https://cdn.simpleicons.org/github" class="logo-mono" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><i class="bi bi-github" hidden></i><b>GitHub</b></div></div>
+                </div>
             </div>
         </section>
 
 
         <!-- ================= EXPERIENCE ================= -->
-        <section class="experience section" id="experience">
-            <div class="container">
-                <div class="section-heading">
-                    <span class="section-label">MY JOURNEY</span>
-                    <h2>Education &amp; <span>Experience</span></h2>
-                    <p>My academic and professional background.</p>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-date">2024 — Present</span>
-                        <div class="timeline-content"><h3>Informatics Engineering Student</h3><h4>Universitas Panca Sakti Bekasi</h4><p>Studying programming, web development, databases, computer networks, and IT. Course projects include a library system, network topology labs, and server infrastructure.</p></div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">2021 — 2025</span>
-                        <div class="timeline-content"><h3>Production Operator</h3><h4>PT Aneka Mitra Gemilang (Wings Group)</h4><p>Operated automated production machines, ran routine machine inspections, followed SOPs, and coordinated with production and maintenance teams.</p></div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-date">2020 — 2023</span>
-                        <div class="timeline-content"><h3>KKNI Level II in Computer and Network Engineering</h3><h4>Vocational school (SMK) competency test</h4><p>Competency certificate issued by BNSP in 2020, valid for three years.</p></div>
-                    </div>
-                    <div class="timeline-item"><!-- Tulis kepanjangan SND jika perlu -->
-                        <span class="timeline-date">2019</span>
-                        <div class="timeline-content"><h3>Logistics &amp; Procurement Intern</h3><h4>PT Astra Otoparts Tbk.</h4><p>Calculated SND figures from purchase order (PO) documents, handed documents over to other departments and the director, and organized document archives.</p></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
 
         <!-- ================= CONTACT ================= -->
@@ -388,13 +379,13 @@
                     <div class="contact-info">
                         <h3>Internship, contract, or full-time</h3>
                         <p>Email is the fastest way to reach me.</p>
-                        <div class="contact-item"><i class="bi bi-envelope"></i><span>Email</span><strong>emailfirman1502@gmail.com</strong></div>
-                        <div class="contact-item"><i class="bi bi-linkedin"></i><span>LinkedIn</span><strong>linkedin.com/in/firmansyaputra15</strong></div>
+                        <a class="contact-item" href="mailto:emailfirman1502@gmail.com"><i class="bi bi-envelope"></i><span>Email</span><strong>emailfirman1502@gmail.com</strong></a>
+                        <a class="contact-item" href="https://www.linkedin.com/in/firmansyaputra15" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i><span>LinkedIn</span><strong>linkedin.com/in/firmansyaputra15</strong></a>
                         <div class="contact-item"><i class="bi bi-geo-alt"></i><span>Location</span><strong>West Java, Indonesia</strong></div>
                         <div class="contact-actions">
                             <a href="mailto:emailfirman1502@gmail.com" class="btn btn-primary"><i class="bi bi-envelope"></i> Email Me</a>
-                            <a href="https://wa.me/6289663449595" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>                         
-                            <a href="assets/Firman-Syaputra-CV.pdf" class="btn btn-primary" download><i class="bi bi-download"></i> Download CV</a>
+                            <a href="https://wa.me/6289663449595" class="btn btn-outline" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>
+                            <a href="assets/Firman-Syaputra-CV.pdf" class="btn btn-outline" download><i class="bi bi-download"></i> Download CV</a>
                         </div>
                     </div>
                 </div>
